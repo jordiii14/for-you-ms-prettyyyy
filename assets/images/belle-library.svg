@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <defs>
+    <linearGradient id="libBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b1324"/>
+      <stop offset="55%" stop-color="#5a1e38"/>
+      <stop offset="100%" stop-color="#2b0d1a"/>
+    </linearGradient>
+    <radialGradient id="sunbeam" cx="50%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#ffe7b3" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#f4a8c5" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#2b0d1a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#f7e29c"/>
+      <stop offset="100%" stop-color="#c59b27"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#libBg)"/>
+  <path d="M220,760 L220,310 A180,180 0 0,1 580,310 L580,760 Z" fill="#fdf2f6" opacity="0.14"/>
+  <path d="M235,760 L235,315 A165,165 0 0,1 565,315 L565,760 Z" fill="none" stroke="url(#goldTrim)" stroke-width="3" opacity="0.7"/>
+  <line x1="400" y1="150" x2="400" y2="760" stroke="url(#goldTrim)" stroke-width="2" opacity="0.5"/>
+  <line x1="235" y1="360" x2="565" y2="360" stroke="url(#goldTrim)" stroke-width="2" opacity="0.5"/>
+  <line x1="235" y1="540" x2="565" y2="540" stroke="url(#goldTrim)" stroke-width="2" opacity="0.5"/>
+  <rect width="800" height="900" fill="url(#sunbeam)"/>
+  <g fill="#260b16" opacity="0.85">
+    <rect x="30" y="120" width="150" height="680" rx="4"/>
+    <rect x="620" y="120" width="150" height="680" rx="4"/>
+  </g>
+  <g stroke="#d4af37" stroke-width="2" opacity="0.45">
+    <line x1="40" y1="240" x2="170" y2="240"/>
+    <line x1="40" y1="380" x2="170" y2="380"/>
+    <line x1="40" y1="520" x2="170" y2="520"/>
+    <line x1="40" y1="660" x2="170" y2="660"/>
+    <line x1="630" y1="240" x2="760" y2="240"/>
+    <line x1="630" y1="380" x2="760" y2="380"/>
+    <line x1="630" y1="520" x2="760" y2="520"/>
+    <line x1="630" y1="660" x2="760" y2="660"/>
+  </g>
+  <g transform="translate(400, 490)">
+    <path d="M-110,15 Q-55,-20 0,10 Q55,-20 110,15 L95,55 Q48,25 0,48 Q-48,25 -95,55 Z" fill="#fffaf4" stroke="#d4af37" stroke-width="2"/>
+    <path d="M0,10 L0,48" stroke="#d4af37" stroke-width="1.5"/>
+    <circle cx="-65" cy="-45" r="3" fill="#ffe7b3"/>
+    <circle cx="72" cy="-58" r="4" fill="#ffe7b3"/>
+    <circle cx="0" cy="-82" r="3.5" fill="#f7b2cd"/>
+    <circle cx="-35" cy="-95" r="2" fill="#ffe7b3"/>
+    <circle cx="42" cy="-30" r="2.5" fill="#ffe7b3"/>
+  </g>
+</svg>

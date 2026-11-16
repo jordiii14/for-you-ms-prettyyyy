@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff6f9"/>
+      <stop offset="50%" stop-color="#fbdce8"/>
+      <stop offset="100%" stop-color="#f5bfd4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#cardGrad)"/>
+  <rect x="28" y="28" width="744" height="544" rx="18" fill="none" stroke="#c89d54" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.7"/>
+  <g transform="translate(400, 265)" fill="none" stroke="#9e3f61" stroke-width="2" stroke-linecap="round">
+    <path d="M0,45 C0,95 -4,125 0,155"/>
+    <path d="M0,105 C-28,92 -42,108 -22,120 C-10,126 -2,115 0,105"/>
+    <path d="M0,88 C28,74 44,90 24,104 C12,110 2,98 0,88"/>
+    <path d="M0,45 C-34,42 -44,6 -16,-14 C4,-28 28,-12 24,12 C20,34 -8,36 -12,16 C-15,2 2,-6 10,4"/>
+    <path d="M-24,20 C-42,12 -36,-24 -8,-30 C20,-36 42,-12 32,18 C24,42 -6,48 -24,20"/>
+  </g>
+  <text x="400" y="475" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#6d2641">A Space Reserved for Future Memories</text>
+  <text x="400" y="508" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="2" fill="#9e3f61" opacity="0.8">REPLACEABLE PHOTO PLACEHOLDER</text>
+</svg>

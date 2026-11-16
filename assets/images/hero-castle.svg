@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf2f6"/>
+      <stop offset="50%" stop-color="#f9d8e6"/>
+      <stop offset="100%" stop-color="#f2b8cf"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="32%" r="42%">
+      <stop offset="0%" stop-color="#fff9eb" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#f7d6e3" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f2b8cf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="castleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8c3b58" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#4a192c" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5f8" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#fff5f8" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <circle cx="600" cy="220" r="300" fill="url(#moonGlow)"/>
+  <circle cx="600" cy="215" r="78" fill="#fffdf7" opacity="0.85"/>
+  <path d="M0,520 Q280,430 600,490 T1200,460 L1200,700 L0,700 Z" fill="#e6a4be" opacity="0.55"/>
+  <path d="M0,560 Q400,490 820,540 T1200,510 L1200,700 L0,700 Z" fill="#c97a98" opacity="0.6"/>
+  <g fill="url(#castleGrad)">
+    <polygon points="600,115 578,210 622,210"/>
+    <rect x="582" y="210" width="36" height="150"/>
+    <polygon points="525,165 508,245 542,245"/>
+    <rect x="511" y="245" width="28" height="140"/>
+    <polygon points="675,165 658,245 692,245"/>
+    <rect x="661" y="245" width="28" height="140"/>
+    <polygon points="455,225 442,290 468,290"/>
+    <rect x="444" y="290" width="22" height="130"/>
+    <polygon points="745,225 732,290 758,290"/>
+    <rect x="734" y="290" width="22" height="130"/>
+    <rect x="466" y="320" width="268" height="160" rx="2"/>
+    <path d="M466,320 L466,308 L480,308 L480,320 L496,320 L496,308 L510,308 L510,320 L690,320 L690,308 L704,308 L704,320 L720,320 L720,308 L734,308 L734,320 Z"/>
+    <path d="M582,480 L582,425 A18,18 0 0,1 618,425 L618,480 Z" fill="#f9d8e6" opacity="0.65"/>
+  </g>
+  <g fill="#ffe8a3" opacity="0.9">
+    <rect x="596" y="235" width="8" height="16" rx="4"/>
+    <rect x="596" y="270" width="8" height="16" rx="4"/>
+    <rect x="521" y="268" width="7" height="14" rx="3.5"/>
+    <rect x="672" y="268" width="7" height="14" rx="3.5"/>
+    <rect x="492" y="352" width="8" height="18" rx="4"/>
+    <rect x="548" y="352" width="8" height="18" rx="4"/>
+    <rect x="644" y="352" width="8" height="18" rx="4"/>
+    <rect x="700" y="352" width="8" height="18" rx="4"/>
+  </g>
+  <rect y="480" width="1200" height="220" fill="url(#mist)"/>
+</svg>

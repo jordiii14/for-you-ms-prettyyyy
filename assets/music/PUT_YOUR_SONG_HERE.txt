@@ -1,0 +1,4 @@
+HOW TO ADD YOUR OWN BACKGROUND MUSIC:
+1. Place your chosen MP3 file inside this folder (assets/music/).
+2. Rename it to 'our-melody.mp3' (or update the <source src="assets/music/our-melody.mp3"> path in index.html).
+3. Even before you add an MP3 file, the website includes a built-in gentle Web Audio music-box lullaby fallback so the music toggle works right out of the box!

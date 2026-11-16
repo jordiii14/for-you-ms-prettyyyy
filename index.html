@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A little fairytale written for Mary Joy — inspired by blush pink skies, enchanted roses, and the quiet magic of getting to know someone special." />
+  <title>A Little Fairytale for Mary Joy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="intro-locked">
+  <!-- Ambient Floating Petals & Sparkle Canvas -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+  <div id="cursor-sparkles" aria-hidden="true"></div>
+
+  <!-- Optional Background Music Player (Replace assets/music/our-melody.mp3 with your own song) -->
+  <audio id="bg-music" loop preload="none">
+    <source src="assets/music/our-melody.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Floating Utility Controls -->
+  <div class="floating-controls" role="region" aria-label="Story controls">
+    <button id="music-toggle" class="pill-btn" type="button" aria-pressed="false" title="Toggle fairytale melody">
+      <span class="music-bars" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      <span class="btn-label">Melody: Off</span>
+    </button>
+    <button id="surprise-btn" class="pill-btn pill-btn--gold" type="button" title="Open a small hidden note">
+      <span aria-hidden="true">✦</span>
+      <span class="btn-label">A Little Note</span>
+    </button>
+  </div>
+
+  <!-- Progress Ribbon -->
+  <div class="reading-progress" aria-hidden="true">
+    <div class="reading-progress__bar" id="reading-progress-bar"></div>
+  </div>
+
+  <!-- =====================================================================
+       01. OPENING EXPERIENCE: ANIMATED FAIRYTALE STORYBOOK / ENVELOPE
+       ===================================================================== -->
+  <section id="opening-cover" class="opening-cover" aria-label="Storybook Cover">
+    <div class="opening-cover__glow" aria-hidden="true"></div>
+    <div class="storybook-frame" id="storybook-frame">
+      <div class="storybook-spine" aria-hidden="true"></div>
+      <div class="storybook-content">
+        <p class="eyebrow">Chapter Zero &bull; A Quiet Dedication</p>
+        <div class="crest-ornament" aria-hidden="true">
+          <svg viewBox="0 0 120 40" width="120" height="40">
+            <path d="M10,20 Q35,5 60,20 Q85,35 110,20" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="60" cy="20" r="3.5" fill="currentColor"/>
+            <circle cx="35" cy="14" r="1.8" fill="currentColor"/>
+            <circle cx="85" cy="26" r="1.8" fill="currentColor"/>
+          </svg>
+        </div>
+        <h1 class="cover-title">
+          <span class="script-accent">A little fairytale for</span>
+          <span class="serif-name">Mary Joy</span>
+        </h1>
+        <p class="cover-subtitle">
+          Written gently, without rush—just a small pink corner of the internet made to bring a smile to your face.
+        </p>
+        <button id="open-fairytale-btn" class="cta-btn" type="button">
+          <span>Open your little fairytale</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <p class="cover-hint">Best enjoyed slowly &bull; Sound optional</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Vertical Narrative -->
+  <main id="fairytale-main" class="fairytale-main">
+
+    <!-- =====================================================================
+         02. HERO SECTION
+         ===================================================================== -->
+    <header id="hero" class="section hero-section">
+      <div class="hero-backdrop" data-parallax="0.18">
+        <img src="assets/images/hero-castle.svg" alt="A dreamy blush pink fairytale castle under moonlight" class="hero-castle-img" />
+      </div>
+      <div class="container hero-container">
+        <div class="hero-badge reveal-up">
+          <span>Dedicated to</span>
+          <strong>Mary Joy</strong>
+        </div>
+        <h2 class="hero-title reveal-up delay-1">
+          For Someone Who Makes Ordinary Moments Feel <em class="script-inline">a Little Magical</em>
+        </h2>
+        <p class="hero-lead reveal-up delay-2">
+          Some people walk into a room—or a day—and quietly change the lighting. Nothing loud, nothing forced; just a warmth that stays with you long after the conversation ends.
+        </p>
+        <div class="hero-scroll-cue reveal-up delay-3">
+          <span>Turn the first page</span>
+          <div class="scroll-line" aria-hidden="true"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- =====================================================================
+         03. A LITTLE BEGINNING (EDITORIAL ASYMMETRIC SPREAD)
+         ===================================================================== -->
+    <section id="beginning" class="section beginning-section">
+      <div class="container editorial-grid">
+        <div class="editorial-media reveal-left">
+          <div class="arch-frame">
+            <!-- Replace memory-placeholder.svg with a favorite aesthetic photo if desired -->
+            <img src="assets/images/memory-placeholder.svg" alt="Botanical rose line art frame" />
+            <div class="arch-caption">Page I &mdash; Where Curiosity Begins</div>
+          </div>
+        </div>
+        <div class="editorial-copy reveal-right">
+          <span class="chapter-tag">Chapter I &bull; A Little Beginning</span>
+          <h2 class="section-heading">Every worthwhile story starts with a quiet hello.</h2>
+          <p>
+            Most days move in predictable rhythms. You wake up, go through your routine, and expect the day to look much like the one before it.
+          </p>
+          <p>
+            And then, every once in a while, you cross paths with someone who makes you pause and think, <em>“I’d really like to know more about her.”</em>
+          </p>
+          <p>
+            We haven’t known each other for years, and this isn’t a grand declaration pretending we have. It’s simply an honest note to say that meeting you has been one of my favorite unexpected moments lately.
+          </p>
+          <blockquote class="pull-quote">
+            “The best chapters never rush their opening pages—they simply make you excited to keep reading.”
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         04. THE GIRL BEHIND THE MAGIC (COMPLIMENT MOSAIC)
+         ===================================================================== -->
+    <section id="behind-the-magic" class="section magic-section">
+      <div class="container">
+        <div class="section-header centered reveal-up">
+          <span class="chapter-tag">Chapter II &bull; The Girl Behind the Magic</span>
+          <h2 class="section-heading">Little Things That Caught My Attention</h2>
+          <p class="section-sub">
+            Sincere impressions from the moments we’ve shared so far—no exaggeration, just truth.
+          </p>
+        </div>
+
+        <div class="compliment-masonry">
+          <article class="compliment-tile tile--featured reveal-up">
+            <div class="tile-number">01</div>
+            <h3>Your Presence Feels Effortlessly Warm</h3>
+            <p>
+              There is an ease to the way you carry yourself. Being around you doesn’t feel performative or guarded—it feels genuine, calm, and naturally uplifting.
+            </p>
+          </article>
+
+          <article class="compliment-tile reveal-up delay-1">
+            <div class="tile-number">02</div>
+            <h3>A Smile Worth Remembering</h3>
+            <p>
+              Some smiles are polite; yours feels real. It’s the kind that instantly makes a conversation brighter and stays in someone’s mind hours later.
+            </p>
+          </article>
+
+          <article class="compliment-tile reveal-up delay-2">
+            <div class="tile-number">03</div>
+            <h3>A Name That Fits You</h3>
+            <p>
+              <strong>Mary Joy</strong>—there really is a lightness in your energy that lives up to your name without you even trying.
+            </p>
+          </article>
+
+          <article class="compliment-tile tile--wide reveal-up delay-1">
+            <div class="tile-number">04</div>
+            <h3>A Heart Drawn to Softness &amp; Wonder</h3>
+            <p>
+              Loving the color pink and admiring Belle says something lovely about you: you appreciate beauty, gentleness, curiosity, and stories with depth beneath the surface.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         05. A BELLE-INSPIRED CHAPTER (DARK BURGUNDY & GOLD LIBRARY SCENE)
+         ===================================================================== -->
+    <section id="belle-chapter" class="section belle-section">
+      <div class="floating-books-layer" aria-hidden="true">
+        <span class="float-motifs m1">✦</span>
+        <span class="float-motifs m2">❀</span>
+        <span class="float-motifs m3">✦</span>
+        <span class="float-motifs m4">❀</span>
+      </div>
+      <div class="container belle-grid">
+        <div class="belle-copy reveal-left">
+          <span class="chapter-tag chapter-tag--gold">Chapter III &bull; Inspired by Belle</span>
+          <h2 class="section-heading heading--light">
+            A Story About Kindness, Curiosity &amp; Looking Deeper
+          </h2>
+          <p>
+            Among all the classic tales, there is a reason <strong>Belle</strong> stands apart. Her story was never about waiting around for glittering spectacles—it was about having an open mind, a curious spirit, and a heart that values character over noise.
+          </p>
+          <p>
+            She found wonder in quiet pages, spoke with grace, and saw beauty in the small, meaningful details that others walked right past.
+          </p>
+          <div class="belle-quote-box">
+            <p>
+              “True charm isn’t loud. It lives in kindness, thoughtfulness, and the gentle way someone treats the world around them.”
+            </p>
+            <span>&mdash; A note inspired by your favorite princess</span>
+          </div>
+        </div>
+
+        <div class="belle-visual reveal-right">
+          <div class="library-window-card">
+            <img src="assets/images/belle-library.svg" alt="Enchanted golden-lit library arch with a floating storybook" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         06. A GARDEN OF THOUGHTS (INTERACTIVE BLOOMING ROSE CARDS)
+         ===================================================================== -->
+    <section id="garden" class="section garden-section">
+      <div class="container">
+        <div class="section-header centered reveal-up">
+          <span class="chapter-tag">Chapter IV &bull; A Garden of Thoughts</span>
+          <h2 class="section-heading">Six Pink Roses, Six Quiet Thoughts</h2>
+          <p class="section-sub">
+            Tap or hover over each rose to reveal a small thought I wanted to leave here for you.
+          </p>
+        </div>
+
+        <div class="rose-garden-grid">
+          <button class="rose-bloom-card reveal-up" type="button" aria-expanded="false">
+            <span class="rose-icon" aria-hidden="true">🌷</span>
+            <span class="rose-title">First Rose &bull; Curiosity</span>
+            <span class="rose-message">I genuinely enjoy learning the little details about what makes you laugh and what inspires you.</span>
+            <span class="rose-tap-hint">Tap to bloom</span>
+          </button>
+
+          <button class="rose-bloom-card reveal-up delay-1" type="button" aria-expanded="false">
+            <span class="rose-icon" aria-hidden="true">🌸</span>
+            <span class="rose-title">Second Rose &bull; Ease</span>
+            <span class="rose-message">Talking with you feels refreshingly natural—like a good book you don’t want to put down.</span>
+            <span class="rose-tap-hint">Tap to bloom</span>
+          </button>
+
+          <button class="rose-bloom-card reveal-up delay-2" type="button" aria-expanded="false">
+            <span class="rose-icon" aria-hidden="true">🌹</span>
+            <span class="rose-title">Third Rose &bull; Sincerity</span>
+            <span class="rose-message">No rehearsed lines—just an honest appreciation for the person you are.</span>
+            <span class="rose-tap-hint">Tap to bloom</span>
+          </button>
+
+          <button class="rose-bloom-card reveal-up" type="button" aria-expanded="false">
+            <span class="rose-icon" aria-hidden="true">✨</span>
+            <span class="rose-title">Fourth Rose &bull; Little Moments</span>
+            <span class="rose-message">Even brief conversations with you have a way of turning an ordinary afternoon around.</span>
+            <span class="rose-tap-hint">Tap to bloom</span>
+          </button>
+
+          <button class="rose-bloom-card reveal-up delay-1" type="button" aria-expanded="false">
+            <span class="rose-icon" aria-hidden="true">🎀</span>
+            <span class="rose-title">Fifth Rose &bull; Softness</span>
+            <span class="rose-message">This entire shade of pink was chosen with one goal: hoping it matches the warmth you bring.</span>
+            <span class="rose-tap-hint">Tap to bloom</span>
+          </button>
+
+          <button class="rose-bloom-card reveal-up delay-2" type="button" aria-expanded="false">
+            <span class="rose-icon" aria-hidden="true">🕊️</span>
+            <span class="rose-title">Sixth Rose &bull; Patience</span>
+            <span class="rose-message">Good things don’t need to be hurried. Getting to know you at your own pace is more than enough.</span>
+            <span class="rose-tap-hint">Tap to bloom</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         07. A LITTLE TIMELINE (THE BEGINNING OF A STORY)
+         ===================================================================== -->
+    <section id="timeline" class="section timeline-section">
+      <div class="container">
+        <div class="section-header centered reveal-up">
+          <span class="chapter-tag">Chapter V &bull; Page by Page</span>
+          <h2 class="section-heading">Not a Long History—Just a Lovely Beginning</h2>
+          <p class="section-sub">
+            Every story starts with a few small markers before the bigger chapters are ever written.
+          </p>
+        </div>
+
+        <div class="ribbon-timeline">
+          <div class="timeline-stem" aria-hidden="true"></div>
+
+          <div class="timeline-node reveal-up">
+            <div class="node-marker">I</div>
+            <div class="node-card">
+              <span class="node-label">Prologue</span>
+              <h3>The Day Our Paths Crossed</h3>
+              <p>
+                A simple moment that didn’t announce itself as special at first—yet looking back, it’s the exact page where everything shifted in a brighter direction.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-node reveal-up">
+            <div class="node-marker">II</div>
+            <div class="node-card">
+              <span class="node-label">Chapter One</span>
+              <h3>The Curiosity of Getting to Know You</h3>
+              <p>
+                Noticing your kindness, your sense of humor, and the quiet grace you carry. Realizing I look forward to every chance we get to talk.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-node reveal-up">
+            <div class="node-marker">III</div>
+            <div class="node-card">
+              <span class="node-label">Present Page</span>
+              <h3>This Little Pink Fairytale</h3>
+              <p>
+                Taking a little time to build something thoughtful just for you—because someone like you deserves effort that feels personal and real.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-node node--future reveal-up">
+            <div class="node-marker">✦</div>
+            <div class="node-card">
+              <span class="node-label">Unwritten Pages</span>
+              <h3>Whatever Beautiful Chapters May Come</h3>
+              <p>
+                Coffee conversations, shared playlists, easy laughter, and memories still waiting to happen—if and whenever you’d like to explore them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         08. INTERACTIVE SEALED PINK ENVELOPE & LETTER
+         ===================================================================== -->
+    <section id="letter-section" class="section letter-section">
+      <div class="container">
+        <div class="section-header centered reveal-up">
+          <span class="chapter-tag">Chapter VI &bull; Sealed With Care</span>
+          <h2 class="section-heading">A Letter Written Just for You</h2>
+          <p class="section-sub">
+            Click the wax seal below to open the envelope and unfold the note inside.
+          </p>
+        </div>
+
+        <div class="envelope-stage reveal-up">
+          <div class="envelope-wrapper" id="envelope-wrapper">
+            <div class="envelope-back"></div>
+            <div class="envelope-flap" aria-hidden="true"></div>
+            <div class="envelope-pocket" aria-hidden="true"></div>
+            <button id="wax-seal-btn" class="wax-seal" type="button" aria-expanded="false" aria-controls="unfolded-letter">
+              <span class="wax-seal__inner">MJ</span>
+              <span class="wax-seal__label">Tap to unseal</span>
+            </button>
+          </div>
+
+          <article id="unfolded-letter" class="letter-paper" hidden>
+            <div class="letter-paper__border">
+              <p class="letter-date">Written on a quiet day, thinking of you</p>
+              <h3 class="letter-salutation">Dear Mary Joy,</h3>
+              <p>
+                I wanted to make something a little different for you—something slower and more thoughtful than a quick message on a screen.
+              </p>
+              <p>
+                Since we recently met, I’ve found myself genuinely enjoying every moment we’ve talked. There is something rare about meeting someone who feels both inspiring and easy to be around at the exact same time. You don’t try to impress anyone, yet you leave a lasting impression anyway.
+              </p>
+              <p>
+                I know we are still right at the beginning of getting to know each other, and I respect that completely. I’m not here to rush anything or write a story ahead of time. I just wanted you to know—clearly and sincerely—that you’ve caught my attention in a truly wonderful way.
+              </p>
+              <p>
+                Whether this little page simply makes you smile today or becomes the first small memory we look back on later, building it for you was already worth it.
+              </p>
+              <div class="letter-signoff">
+                <span>With warmth and genuine admiration,</span>
+                <strong class="script-signature">Someone who’s really glad he met you</strong>
+              </div>
+              <button id="reseal-letter-btn" class="text-link-btn" type="button">Fold &amp; reseal envelope</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         09. THE ENCHANTED ROSE UNDER A GLASS DOME
+         ===================================================================== -->
+    <section id="enchanted-rose" class="section dome-section">
+      <div class="container dome-grid">
+        <div class="dome-stage reveal-left">
+          <div class="glass-dome" id="glass-dome" role="img" aria-label="An animated glowing pink enchanted rose preserved under a crystal glass dome">
+            <div class="dome-aura"></div>
+            <div class="dome-glass">
+              <div class="dome-reflection"></div>
+              <!-- Intricate Animated Rose SVG -->
+              <svg class="enchanted-rose-svg" viewBox="0 0 240 320" width="240" height="320">
+                <defs>
+                  <radialGradient id="roseBloom" cx="50%" cy="40%" r="55%">
+                    <stop offset="0%" stop-color="#ffd6e5"/>
+                    <stop offset="45%" stop-color="#f26b9c"/>
+                    <stop offset="85%" stop-color="#b8295c"/>
+                    <stop offset="100%" stop-color="#6e1233"/>
+                  </radialGradient>
+                  <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#356847"/>
+                    <stop offset="100%" stop-color="#5c9c72"/>
+                  </linearGradient>
+                </defs>
+                <!-- Stem & Leaves -->
+                <path d="M120,130 C118,185 123,235 120,282" stroke="url(#stemGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <path d="M120,195 C90,180 72,198 92,212 C105,220 116,208 120,195 Z" fill="#49825d"/>
+                <path d="M121,222 C152,206 168,225 148,238 C135,246 124,234 121,222 Z" fill="#3c6e4e"/>
+                <!-- Outer Petals -->
+                <path d="M120,135 C72,135 64,75 104,58 C120,50 136,50 152,58 C184,75 168,135 120,135 Z" fill="url(#roseBloom)"/>
+                <path d="M84,96 C66,112 82,144 120,142 C158,144 174,112 156,96 C142,118 98,118 84,96 Z" fill="#d9487a" opacity="0.88"/>
+                <!-- Inner Swirl -->
+                <path d="M120,66 C98,66 90,94 108,108 C126,120 148,102 138,82 C130,68 110,72 112,88 C114,98 128,96 126,86" fill="none" stroke="#ffe6f0" stroke-width="2.4" stroke-linecap="round"/>
+                <!-- Gently Falling Magical Petal -->
+                <path class="falling-dome-petal" d="M148,142 C158,138 166,148 156,156 C148,162 142,150 148,142 Z" fill="#f78fb5"/>
+              </svg>
+              <!-- Floating Golden Motes inside Dome -->
+              <span class="mote m-a"></span>
+              <span class="mote m-b"></span>
+              <span class="mote m-c"></span>
+              <span class="mote m-d"></span>
+            </div>
+            <div class="dome-pedestal"></div>
+          </div>
+          <button id="spark-rose-btn" class="pill-btn pill-btn--centered" type="button">
+            <span>✦ Touch the glass dome</span>
+          </button>
+        </div>
+
+        <div class="dome-copy reveal-right">
+          <span class="chapter-tag">Chapter VII &bull; The Enchanted Rose</span>
+          <h2 class="section-heading">Even a Small Beginning Can Grow Into Something Meaningful</h2>
+          <p>
+            In <em>Beauty and the Beast</em>, the enchanted rose measures time. Here, it represents something much gentler: patience, care, and quiet potential.
+          </p>
+          <p>
+            A rose doesn’t bloom all at once in a single second. It opens petal by petal, given warmth, light, and space to become what it’s meant to be.
+          </p>
+          <p>
+            That’s how I see getting to know you—unhurried, intentional, and worth every bit of care.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         10. A LITTLE WISH FOR THE FUTURE (INTERACTIVE WISH CARD)
+         ===================================================================== -->
+    <section id="wish-section" class="section wish-section">
+      <div class="container">
+        <div class="wish-card reveal-up" id="wish-card">
+          <span class="chapter-tag">Chapter VIII &bull; A Little Wish</span>
+          <h2 class="section-heading">What I’m Hoping For</h2>
+          <p class="wish-lead">
+            Nothing extravagant—just the simple, genuine things that make getting to know someone memorable:
+          </p>
+          <ul class="wish-list">
+            <li><span>✦</span> More conversations where time passes without either of us noticing</li>
+            <li><span>✦</span> Finding out your favorite stories, songs, and comfort foods</li>
+            <li><span>✦</span> Being a reason you smile on days that feel a little heavy</li>
+            <li><span>✦</span> Building real memories, one simple hangout at a time</li>
+          </ul>
+          <div class="wish-interactive-box">
+            <button id="make-wish-btn" class="cta-btn cta-btn--soft" type="button">
+              <span>Send a little wish into the stars</span>
+            </button>
+            <p id="wish-feedback" class="wish-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         11. THE FINAL CHAPTER (GENTLE, NO-PRESSURE QUESTION)
+         ===================================================================== -->
+    <section id="final-chapter" class="section final-chapter-section">
+      <div class="container final-chapter-box reveal-up">
+        <span class="chapter-tag">Chapter IX &bull; The Final Question</span>
+        <h2 class="final-question">
+          “If life ever writes a beautiful chapter for us, would you let me be part of it?”
+        </h2>
+        <p class="no-pressure-note">
+          No rush, no pressure, and no expectations—take all the time in the world. Even just getting to know you right now is already a privilege.
+        </p>
+
+        <div class="response-choices" role="group" aria-label="Gentle response options">
+          <button class="choice-btn" type="button" data-choice="smile">
+            <span>🌸 This definitely made me smile</span>
+          </button>
+          <button class="choice-btn" type="button" data-choice="chapter">
+            <span>✨ Let’s see where the story goes</span>
+          </button>
+        </div>
+
+        <div id="choice-response-banner" class="choice-banner" hidden aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         12. FINAL SCREEN
+         ===================================================================== -->
+    <footer id="ending" class="section ending-section">
+      <div class="container ending-container reveal-up">
+        <div class="beating-heart" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="54" height="54">
+            <path d="M32 56C32 56 8 40.4 8 22.5C8 14.5 14.3 8 22 8C26.6 8 30.7 10.3 32 13.8C33.3 10.3 37.4 8 42 8C49.7 8 56 14.5 56 22.5C56 40.4 32 56 32 56Z" fill="#d94e7f"/>
+          </svg>
+        </div>
+        <h2 class="ending-title">Until the next chapter, <span class="script-inline">Mary Joy.</span></h2>
+        <p class="ending-sub">Made with care, warmth, and a whole lot of pink.</p>
+
+        <div class="ending-actions">
+          <button id="replay-btn" class="pill-btn" type="button">
+            <span>↻ Replay the fairytale</span>
+          </button>
+          <button id="back-to-top-btn" class="pill-btn pill-btn--gold" type="button">
+            <span>↑ Back to top</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Hidden Surprise Note Modal -->
+  <div id="surprise-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="surprise-modal-title">
+    <div class="modal-card">
+      <button id="close-modal-btn" class="modal-close" type="button" aria-label="Close hidden note">&times;</button>
+      <span class="chapter-tag">A Secret Margin Note</span>
+      <h3 id="surprise-modal-title">In Case Nobody Told You Today…</h3>
+      <p>
+        You have a really lovely energy, Mary Joy. Whoever gets the chance to know your heart is genuinely lucky—and I’m really glad our paths crossed.
+      </p>
+      <p class="modal-ps">P.S. Yes, every shade of pink on this page was chosen just for you.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
